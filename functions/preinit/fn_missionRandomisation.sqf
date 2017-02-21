@@ -10,8 +10,8 @@ if (isServer) then {
 	brokenFenceObjects = [];
 
 	_fenceOpeningsTotal = 10;
-	_fenceOpeningsMin = 4;
-	_fenceOpeningsMax = 6;
+	_fenceOpeningsMin = 2;
+	_fenceOpeningsMax = 4;
 
 	_entranceCount = 7;
 	_entranceMin = 1;
@@ -39,8 +39,7 @@ if (isServer) then {
 
 	_enemiesOnRoof = 4;
 
-	//_playerCount = playersNumber independent;
-	_playerCount = 10;
+	_playerCount = playersNumber independent;
 
 	_buildingCount = if (_playerCount < 12) then { 1; } else { 2; };
 	_enemiesPerFloorTotal = _playerCount;
