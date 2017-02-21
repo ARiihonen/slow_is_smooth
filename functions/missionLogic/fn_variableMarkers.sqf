@@ -1,8 +1,9 @@
+
+if (!(1 in buildings)) then	{ deleteMarker "mrk_buildingOne"; };
+if (!(2 in buildings)) then { deleteMarker "mrk_buildingTwo"; };
+
 if (isServer) then
 {
-	if (!(1 in buildings)) then	{ deleteMarker "mrk_buildingOne"; };
-	if (!(2 in buildings)) then { deleteMarker "mrk_buildingTwo"; };
-
 	{
 		_index = str(_forEachIndex);
 		_markerName = format ["mrk_fenceOpening_%1", _index];

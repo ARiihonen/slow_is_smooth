@@ -12,8 +12,7 @@ if ( addonACRE ) then { _signal = "SignalACRE.txt"; };
 _buildingText = if (count buildings > 1) then
 {
 	"two <marker name = 'mrk_buildingOne'>large</marker> <marker name = 'mrk_buildingTwo'>buildings</marker>";
-} else
-{
+} else {
 	if (1 in buildings) then {
 		"<marker name = 'mrk_buildingOne'>one large building</marker>";
 	} else {

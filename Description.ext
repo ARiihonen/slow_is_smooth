@@ -61,9 +61,9 @@ class CfgDebriefing
 
 	class Lose
 	{
-		title = "Mission Failed";
-		subtitle = "Fuck off";
-		description = "Scrub";
+		title = "Taken Hostage";
+		subtitle = "You were seriously injured and taken hostage";
+		description = "Eventually, you were killed by the FIA fighters when your forces assaulted despite your imprisonment.";
 		picture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 		pictureColor[] = {1.0,0.3,0.2,1.0};
 	};
@@ -94,10 +94,9 @@ class CfgFunctions
 		class mods
 		{
 			class checkMod {};
-			class checkDefaults { preInit = 1; };
-			class initASR {};
-			class initTFAR {};
-			class initACRE {};
+			class initASR { preInit = 1; };
+			class initTFAR { preInit = 1; };
+			class initACRE { preInit = 1; };
 			class TFARRadiosAdded {};
 		};
 
@@ -124,6 +123,7 @@ class CfgFunctions
 			class getIrregularWeapons {};
 			class setIrregularGearSets {};
 			class playerGearByMod {};
+			class nvGoggles {};
 		};
 
 		class missionLogic
@@ -135,7 +135,7 @@ class CfgFunctions
 			class initBriefing { postInit = 1; };
 			class JIPSetup { preInit = 1; };
 			class startingPosition {};
-			class variableMarkers {};
+			class variableMarkers { postInit = 1; };
 		};
 	};
 };
@@ -518,4 +518,18 @@ class CfgNotifications
 		priority = 4;
 		sound = "taskUpdated";
 	};
+};
+
+class CfgAISkills
+{
+	aimingAccuracy[] = {1, 1, 1, 1};
+	aimingShake[] = {1, 1, 1, 1};
+	aimingSpeed[] = {1, 1, 1, 1};
+	commanding[] = {1, 1, 1, 1};
+	courage[] = {1, 1, 1, 1};
+	endurance[] = {1, 1, 1, 1};
+	general[] = {1, 1, 1, 1};
+	reloadSpeed[] = {1, 1, 1, 1};
+	spotDistance[] = {1, 1, 1, 1};
+	spotTime[] = {1, 1, 1, 1};
 };

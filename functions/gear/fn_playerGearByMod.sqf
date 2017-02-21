@@ -12,15 +12,25 @@ _ACEBasicGear = [
 	["ACE_morphine", 2]
 ];
 _ACEMedicGear = [
-	["ACE_fieldDressing", 20],
+	["ACE_fieldDressing", 25],
 	["ACE_epinephrine", 10],
 	["ACE_morphine", 10],
-	["ACE_bloodIV", 2]
+	["ACE_bloodIV_500", 8]
 ];
 
 
+if (player == leader (group player) && !("ItemGPS" in assignedItems player)) then
+{
+	player linkItem "ItemGPS";
+};
+
+if ("ace_attach" call ARTR_fnc_checkMod) then {
+	player addItem "ACE_IR_Strobe_Item";
+};
+
 if ("ace_microdagr" call ARTR_fnc_checkMod && "ItemGPS" in (assignedItems player) ) then
 {
+	player unLinkItem "ItemGPS";
 	player addItemToUniform "ACE_microDagr";
 };
 

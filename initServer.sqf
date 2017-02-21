@@ -2,8 +2,6 @@
 This runs on the server machine after objects have initialised in the map. Anything the server needs to set up before the mission is started is set up here.
 */
 
-call ARTR_fnc_variableMarkers;
-
 //Task creating: [owner, task name/[task name, parent task name], [description, title, marker], destination, state, priority, shownotification, type, shared] call BIS_fnc_taskCreate;
 [
 	independent,
@@ -31,7 +29,7 @@ trigger_dead = ["{ alive _x } count playableUnits <= 0", "call ARTR_fnc_serverEn
 if ("ace_medical" call ARTR_fnc_checkMod) then
 {
 	trigger_unconscious = ["{ !(_x getVariable ['ACE_isUnconscious', false]) } count playableUnits <= 0", "call ARTR_fnc_serverEnding;"] call ARTR_fnc_emptyTrigger;
-	trigger_unconscious setTriggerTimeout [15, 15, 15, false];
+	trigger_unconscious setTriggerTimeout [20, 20, 20, true];
 };
 
 //Sleep for 10-30 seconds and call server ending if all enemies dead

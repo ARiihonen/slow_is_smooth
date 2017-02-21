@@ -1,0 +1,4 @@
+NOTES:
+- TFAR: microDAGR still given wtf => TFAR settings not applied (POSSIBLY BECAUSE OF FORCED OPTIONS)
+
+-mod=C:\Users\Artturi\Documents\Arma3Mods\@ace; -mod=C:\Users\Artturi\Documents\Arma3Mods\@ASR_AI3; -mod=C:\Users\Artturi\Documents\Arma3Mods\@CBA_A3; -mod=C:\Users\Artturi\Documents\Arma3Mods\@task_force_radio;
