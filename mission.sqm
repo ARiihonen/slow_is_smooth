@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=3160;
+		nextID=3161;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=5768;
+		nextID=6084;
 	};
 	class Camera
 	{
-		pos[]={9228.9951,67.580559,21650.445};
-		dir[]={0.37488404,-0.52906573,0.76140946};
-		up[]={0.23370427,0.84857023,0.47466841};
-		aside[]={0.89725345,-7.9907477e-007,-0.44176602};
+		pos[]={9192.001,46.640274,21622.18};
+		dir[]={0.44687903,-0.47445363,0.75854635};
+		up[]={0.24084027,0.88026482,0.40881234};
+		aside[]={0.86169565,-7.4977288e-007,-0.50764614};
 	};
 };
 binarizationWanted=0;
@@ -331,7 +331,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			dataType="Layer";
@@ -1892,7 +1892,7 @@ class Mission
 													side="Empty";
 													class Attributes
 													{
-														presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs == 2 )";
+														presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs != 2 )";
 														createAsSimpleObject=1;
 													};
 													id=630;
@@ -1911,7 +1911,7 @@ class Mission
 													flags=4;
 													class Attributes
 													{
-														presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs == 2 )";
+														presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs != 2 )";
 														createAsSimpleObject=1;
 													};
 													id=631;
@@ -1929,7 +1929,7 @@ class Mission
 													side="Empty";
 													class Attributes
 													{
-														presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs == 2 )";
+														presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs != 2 )";
 														createAsSimpleObject=1;
 													};
 													id=632;
@@ -1963,7 +1963,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs == 2)";
+												presenceCondition="1 in buildings && ( !(5 in buildingOneEntrances) || buildingOneOpenStairs != 1)";
 												createAsSimpleObject=1;
 											};
 											id=640;
@@ -26000,16 +26000,16 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												presenceCondition="2 in buildings && ( !(5 in buildingTwoEntrances) || buildingTwoOpenStairs == 2)";
+												presenceCondition="2 in buildings && ( !(5 in buildingTwoEntrances) || buildingTwoOpenStairs != 1)";
 												createAsSimpleObject=1;
 											};
 											id=1762;
 											type="Land_Shoot_House_Wall_F";
-											atlOffset=0.1417284;
+											atlOffset=0.14172745;
 										};
 									};
 									id=1760;
-									atlOffset=0.1417284;
+									atlOffset=0.14172745;
 								};
 								class Item1
 								{
@@ -54403,6 +54403,18 @@ class Mission
 			angle=144.88;
 			id=3159;
 			atlOffset=-0.10633469;
+		};
+		class Item19
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9256.335,14.205924,21703.277};
+			};
+			name="headlessClient";
+			isPlayable=1;
+			id=3160;
+			type="HeadlessClient_F";
 		};
 	};
 };

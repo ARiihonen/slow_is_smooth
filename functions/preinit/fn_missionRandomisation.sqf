@@ -50,7 +50,7 @@ if (isServer) then {
 
 	fenceOpenings = [_fenceOpeningsTotal,_fenceOpeningsMax,_fenceOpeningsMin] call ARTR_fnc_presenceArray;
 
-	buildings = [_buildingCount,2] call ARTR_fnc_presenceArray;
+	buildings = [2,_buildingCount] call ARTR_fnc_presenceArray;
 	publicVariable "buildings";
 
 	buildingOneEntrances = [];
